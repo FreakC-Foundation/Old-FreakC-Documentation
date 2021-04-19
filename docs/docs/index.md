@@ -1,24 +1,26 @@
-#### A programming language for drunk codersA programming language for drunk coders
 
-# InstallationInstallation
+## Home
+Freak-C lang, the programming language for drunk programmers
+
+### Installation
 
 There are many ways to install FreakC, you can:
 
-```
-1. Clone FreakC from Github using:
+- Clone FreakC from Github using:
+```sh
 git clone https://github.com/nguyenphuminh/FreakC.git
-2. Install here.
 ```
-# Cli's usageCli's usage
+
+### CLI Usage
 
 In the "FreakC" folder, open cmd and type this command to compile and run the code:
 
-```
-freakc file_name
+```sh
+freakc <file-name>
 ```
 Example:
 
-```
+```sh
 freakc "Examples/HelloWorld.fclang"
 ```
 If you want to compile the code only, type:
@@ -56,7 +58,7 @@ To show all options and usage (with a dumb ascii art), type:
 ```
 freakc
 ```
-## Interactive shellInteractive shell
+### Interactive shell
 
 To open interactive shell, type:
 
@@ -64,33 +66,42 @@ To open interactive shell, type:
 freakc --shell
 ::Or fcshell
 ```
-You can type in whatever you want, it will be stored in "tar.fclang". You can type in any of these commands to execute tasks:
+You can type in whatever you want, it will be stored in `tar.fclang`. You can type in any of these commands to execute tasks:
 
-#### StartFuckin[cli] - Runs all the codes written
+#### StartFuckin[cli]
+Runs all the codes written
 
-#### StopFuckin[cli] - Delete tar.fclang and exit
+#### StopFuckin[cli] 
+Delete tar.fclang and exit
 
-#### WipeAss[cli] - Resets codes
+#### WipeAss[cli]
+Resets codes
 
-#### Shit[cli] - Clear console
+#### Shit[cli]
+Clear console
 
 
-# Development environmentDevelopment environment
+### Development environment
 
-## VSCodeVSCode
+#### VSCode
 
-Download the "FreakC" extension from Marketplace and you are ready to go! The extension provides syntax-highlighting as well as code auto-completion. You can
-find the source code of the extension right here.
+Download the `FreakC` extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=FreakC.freakc) and you are ready to go! The extension provides syntax-highlighting as well as code auto-completion. You can find the source code of the extension right [here](https://github.com/FreakC-Foundation/FreakC-vscode).
 
-## Sublime text 3Sublime text 3
+#### Sublime text
 
-In "FreakC/Utilities/Scripts" there is a file called "FreakC.sublime-build" which is the Sublime Text's build system for FreakC. To use it, please paste it in the
-"C:\Users\admin\AppData\Roaming\Sublime Text 3\Packages\User" or wherever your Packages folder is. Then, make sure that you have set the environment variable
-for FreakC. After that, you will be able to compiles FreakC codes in Sublime Text.
+- Added FreakC to the `PATH` environment variable
+- Copy and paste this code snippet in `C:\Users\<username>\AppData\Roaming\Sublime Text 3\Packages\User`
+```sublime-build
+{
+	"cmd": ["FreakC","$file"]
+}
+```
 
-For syntax highlighting, copy the "FreakC" folder in the same folder, then paste it in "%APPDATA%\Sublime Text v\Packages\".
+For syntax highlighting, copy [this](https://github.com/FreakC-Foundation/FreakC/tree/master/Utilities/Scripts/FreakC) folder in the same folder, then paste it in `%APPDATA%\Sublime Text v\Packages\`.
 
-# Print text with Swear[fnc]Print text with Swear[fnc]
+### Language
+
+#### Print text with Swear[fnc]
 
 To print out a string or text, you use:
 
@@ -105,14 +116,14 @@ SwearLine[fnc] string
 The differences between Swear[fnc] and SwearLine[fnc] is that Swear[fnc] prints out normal text, if there are no text printed out, there might be some errors. But
 SwearLine[fnc] prints out a space then a text, if nothing is printed out, it will add a new line.
 
-## Store Data with Swear[fnc]Store Data with Swear[fnc]
+#### Store Data with Swear[fnc]
 
 You can actually store data to a file by using:
 
 ```
 Swear[fnc] data>>file
 ```
-# Special charactersSpecial characters
+#### Special characters
 
 Unlike any characters, "!" requires "^", for example:
 
@@ -130,7 +141,7 @@ Swear[fnc] ^!
 ```
 The reason for this is that FreakC has: SETLOCAL ENABLEDELAYEDEXPANSION which causes "!" to not be used properly.
 
-# Unicode charactersUnicode characters
+#### Unicode characters
 
 To start using Unicode character, type:
 
@@ -145,8 +156,7 @@ Swear[fnc] ă ê ©
 :: Would print out "ă ê ©"
 ```
 
-# Prints out command's textPrints out command's text
-
+#### Prints out command's text
 If you type:
 
 ```
@@ -159,7 +169,7 @@ print out "Swear[fnc]", you will need to add "^" in any place of the command. Ex
 Swear[fnc] S^wear[fnc]
 :: This will print out "Swear[fnc]"
 ```
-# First noteFirst note
+#### First note
 
 To pause in FreakC, please type in:
 
@@ -168,13 +178,13 @@ GotoToilet[fnc]
 ```
 You will see this command underneath, but you should you this command to pause your program.
 
-# Variables and data typesVariables and data types
+#### Variables and data types
 
-## Data typesData types
+##### Data types
 
-There are three data types in FreakC: integer, string.
+There are three data types in FreakC: `integer`, `string`.
 
-## VariablesVariables
+##### Variables
 
 To declare a variable, you use:
 
@@ -222,7 +232,7 @@ Note: If you do this, it will prints out "Enter name:" right next to the input
 ```
 PoopInput[fnc] variable_name=Enter name:
 ```
-### MathsMaths
+#### Maths
 
 You can do Math equations with FreakC like this:
 
@@ -236,51 +246,51 @@ PoopString[fnc] result=Hel + lo
 ```
 Math operatorsMath operators
 
-#### () - grouping
+##### `()` - grouping
 
-#### ! ~ - - unary operators
+##### `! ~` - - unary operators
 
-#### * / % - arithmetic operators
+##### `* / %` - arithmetic operators
 
-#### + - - arithmetic operators
+##### `+ -` - arithmetic operators
 
-#### << >> - logical shift
+##### `<< >>` - logical shift
 
-#### & - bitwise and
+##### `&` - bitwise and
 
-#### ^ - bitwise exclusive or
+##### `^` - bitwise exclusive or
 
-#### | - bitwise or
+##### `|` - bitwise or
 
-#### = *= /= %= += -= - assignment
+##### `= *= /= %= += -=` - assignment
 
-#### &= ^= |= <<= >>= , - expression separator
+##### `&= ^= |= <<= >>= ,` - expression separator
 
-#### ++ -- - plus/minus 1
+##### `++ --` - plus/minus 1
 
-## Some Math commandsSome Math commands
+##### Some Math commands
 
-### Make a number squaredMake a number squared
+###### Make a number squared
 
 ```
 SquareMyBois[fnc] variable_without_%%
 ```
-### Make a number cubedMake a number cubed
+###### Make a number cubed
 
 ```
 CubeMyBois[fnc] variable_without_%%
 ```
-### Print out an equation:Print out an equation:
+###### Print out an equation:Print out an equation:
 
 ```
 FuckUp[fnc] equation
 ```
-### Assign the result of an equation to %fhsolved%Assign the result of an equation to %fhsolved%
+###### Assign the result of an equation to %fhsolved%Assign the result of an equation to %fhsolved%
 
 ```
 FuckUpLess[fnc] equation
 ```
-### Merge stringsMerge strings
+###### Merge strings
 
 To merge strings, do this:
 
@@ -301,7 +311,7 @@ PoopString[fnc] str=%str1% + %str2%
 This time, the value will be "Hello + World"
 
 
-### Use variables in different commandsUse variables in different commands
+###### Use variables in different commands
 
 You can use variables in FreakC commands as %variable_name%
 
@@ -337,7 +347,7 @@ ScanLetters[fnc] %%i in (%arr%) do (
 Swear[fnc] %%i
 )
 ```
-### Local and global variablesLocal and global variables
+#### Local and global variablesLocal and global variables
 
 You can declare a global variable by just using all the ways mentioned recently.
 
@@ -364,68 +374,80 @@ OpenHouse[fnc] ENABLEEXTENSIONS
 ```
 Note: DELAYEDEXPANSION is already enabled in FreakC. So you wouldn't need to enable it actually.Note: DELAYEDEXPANSION is already enabled in FreakC. So you wouldn't need to enable it actually.
 
-### Special variablesSpecial variables
+#### Special variables
 
-#### %numpiss% - A variable with the value as random numbers from 1 to 9
+##### `%numpiss%` 
+A variable with the value as random numbers from 1 to 9
 
-#### %numpuke% - A variable with the value as random numbers from 1 to 99
+##### `%numpuke%` 
+A variable with the value as random numbers from 1 to 99
 
-#### %numpoop% - A variable with the value as random numbers from 1 to 999
+##### `%numpoop%` 
+A variable with the value as random numbers from 1 to 999
 
-#### %numdiarrhea% - A variable with the value as random numbers from 1 to 9999
+##### `%numdiarrhea%` 
+A variable with the value as random numbers from 1 to 9999
 
-#### %numbutt% - A variable with the value as random numbers from 1 to 99999
+##### `%numbutt%` 
+A variable with the value as random numbers from 1 to 99999
 
-#### %time% - A variable with the value as the current timer
+##### `%time%`  
+A variable with the value as the current timer
 
-#### %date% - A variable with the value as the current date
+##### `%date%` 
+A variable with the value as the current date
 
-#### %cd% - A variable with the value as the current directory
+##### `%cd%` 
+A variable with the value as the current directory
 
-#### %errorlevel% - A variable with the value as the current Batch errorlevel value
+##### `%errorlevel%` 
+A variable with the value as the current Batch errorlevel value
 
 
-#### %cmdextversion% - A variable with the value as the current Command Processor Extensions version number
+##### `%cmdextversion%` 
+A variable with the value as the current Command Processor Extensions version number
 
-#### %cmdcmdline% - A variable with the value as the original command line that invoked the Command Processor
+##### `%cmdcmdline%` 
+A variable with the value as the original command line that invoked the Command Processor
 
-#### %path% - A variable with the value as all environment variables
+##### `%path%` 
+A variable with the value as all environment variables
 
-#### %highestnumanodenumber% - A variable with the value as the highest NUMA node number on this machine
+##### `%highestnumanodenumber%` 
+A variable with the value as the highest NUMA node number on this machine
 
 There are a lot of special variables left, but you might not find uses for them
 
-### Implementations on variablesImplementations on variables
+#### Implementations on variables
+`%variable_name:~0,-2%` - would extract all but the last 2 characters of the variable
 
-#### %variable_name:~0,-2% - would extract all but the last 2 characters of the variable
+`%variable_name:~-5%` - would extract the last 5 characters of the variable
 
-#### %variable_name:~-5% - would extract the last 5 characters of the variable
+`%variable_name:~5%` - would remove the first 5 characters of the variable
 
-#### %variable_name:~5% - would remove the first 5 characters of the variable
+`%variable_name:str1=str2%` - would replace str1 with str
 
-#### %variable_name:str1=str2% - would replace str1 with str
+`%PATH:~10,5%` - would expand the PATH environment variable, and then use only the 5 characters that begin at the 11th (offset 10)
 
-#### %PATH:~10,5% - would expand the PATH environment variable, and then use only the 5 characters that begin at the 11th (offset 10)
+character of the expanded result. If the length is not specified, then it defaults to the remainder of the variable value. If either number (offset or
 
-#### character of the expanded result. If the length is not specified, then it defaults to the remainder of the variable value. If either number (offset or
+length is negative, then the number used is the length of the environment variable value added to the offset or length specified/li>
 
-#### length) is negative, then the number used is the length of the environment variable value added to the offset or length specified/li>
+#### Another way to declare variables
 
-### Another way to declare variablesAnother way to declare variables
+`Shit[typ]` - Declare a variable as a string
 
-#### Shit[typ] - Declare a variable as a string
+`Puke[typ]` - Declare a variable as an integer
 
-#### Puke[typ] - Declare a variable as an integer
+`Cum[typ]` - Create a function/label
 
-#### Cum[typ] - Create a function/label
+`Piss[typ]` - Declare a variable from user's input
 
-#### Piss[typ] - Declare a variable from user's input
-
-#### Jelly[typ] - Declare a variable as a float
+`Jelly[typ]` - Declare a variable as a float
 
 And if you're asking yourself why add more dumb commands like this, well, because FreakC's bs.
 
-### Embed FreakC commands to variablesEmbed FreakC commands to variables
+#### Embed FreakC commands to variables
 
 In Batch, you can do this to print out Hello:
 
@@ -445,9 +467,9 @@ You should type:
 PoopString[fnc] stuff= Swear[fnc] Hello
 %stuff%
 ```
-### NotesNotes
+##### Notes
 
-There are variables that you CAN NOT USE like: %a%, %printString%, %fccompile%, %fccompilename%, %fcread%.
+There are variables that you CAN NOT USE like: `%a%`, `%printString%`, `%fccompile%`, `%fccompilename%`, `%fcread%`.
 
 Also, spaces in FreakC is extremely important, so if you declare a variable like this:
 
@@ -474,9 +496,9 @@ PoopString[fnc] text
 would return any variable begins with "text"
 
 
-# CommentsComments
+#### Comments
 
-Single-line comment:
+##### Single-line comment:
 
 ```
 :: Comment
@@ -486,7 +508,7 @@ Another way:
 ```
 rem comment
 ```
-Multi-line comment:
+##### Multi-line comment:
 
 ```
 [cmt] comment
@@ -497,7 +519,7 @@ To write a comment that won't show up in the compiled codes, use:
 ```
 [hcmt] comment
 ```
-# Labels and Goto statementLabels and Goto statement
+#### Labels and Goto statement
 
 Labels helps you to jump to a state or pass parameters to execute tasks (somewhat procedural programming).
 
@@ -526,7 +548,7 @@ GrabFnc[fnc] can also targets file, while LickFnc[fnc] can only targets label/fu
 ```
 GrabFnc[fnc] file_name
 ```
-## Differences between EatFnc[fnc] and GrabFnc[fnc]Differences between EatFnc[fnc] and GrabFnc[fnc]
+#### Differences between EatFnc[fnc] and GrabFnc[fnc]
 
 EatFnc[fnc] jumps to a function and will not execute the previous code while GrabFnc[fnc] use code from the function but still execute the previous code.
 
@@ -542,7 +564,7 @@ Swear[fnc] %ans%
 ```
 Note: Parameters in FreakC are %~1, %~2,...
 
-## NotesNotes
+##### Notes
 
 To restart the program, you can type:
 
@@ -558,7 +580,7 @@ This code would still work eventhough it contains special character
 PoopFnc[fnc] dsasd$ 123213 323
 EatFnc[fnc] dsasd$ 123213 323
 ```
-# Object Oriented ProgrammingObject Oriented Programming
+#### Object Oriented Programming
 
 There is no such thing as "OOP on FreakC", but you can fake one, like this:
 
@@ -579,7 +601,7 @@ PoopString[fnc] %~1.model=%~
 )
 Die[fnc] /b 0
 ```
-# If statementsIf statements
+#### Conditionals
 
 To use if statement, type:
 
@@ -602,25 +624,19 @@ DoIf[fnc] %abc% == 20 (
 echo abc is equal to 100
 )
 ```
-## All the comparison operators:All the comparison operators:
+#### Comparison operators
 
-#### "==" - Equal
+`==` - Equal
+`EQU` - Equal
+`NEQ` - Not equal
+`LSS` - Less than
+`LEQ` - Less than or equal
+`GTE` - Greater than
+`GEQ` - Greater than or equal
 
-#### "EQU" - Equal
+#### Other kinds or if statements
 
-#### "NEQ" - Not equal
-
-#### "LSS" - Less than
-
-#### "LEQ" - Less than or equal
-
-#### "GTE" - Greater than
-
-#### "GEQ" - Greater than or equal
-
-## Other kinds or if statements:Other kinds or if statements:
-
-## Execute if a file existsExecute if a file exists
+##### Execute if a file exists
 
 
 ```
@@ -628,21 +644,21 @@ DoIfExist[fnc] file_name (
 command_to_execute
 )
 ```
-### Execute if a variable is definedExecute if a variable is defined
+##### Execute if a variable is defined
 
 ```
 DoIfDefined[fnc] variable_name (
 command_to_execute
 )
 ```
-### Execute if a condition is falseExecute if a condition is false
+##### Execute if a condition is false
 
 ```
 DoIfFalse[fnc] condtition (
 command_to_execute
 )
 ```
-### ElseElse
+##### Else
 
 ```
 DoIf[fnc] condition (
@@ -651,7 +667,7 @@ command_to_execute
 command_to_execute
 )
 ```
-## NotesNotes
+##### Notes
 
 To use if not for DoIfDefined[fnc] or DoIfExist[fnc], you can do this:
 
@@ -663,7 +679,7 @@ DoIfNotDefined[fnc] file (
 command_to_execute
 )
 ```
-## Pressing keys with respondPressing keys with respond
+#### Pressing keys with respond
 
 To receive keys pressed, add:
 
@@ -698,7 +714,7 @@ DoIfTap[fnc] 1 (
 Swear[fnc] You pressed "W"
 )
 ```
-## If not for tappingIf not for tapping
+##### If not for tapping
 
 You can use:
 
@@ -707,7 +723,7 @@ DoIfNotTap[fnc]
 ```
 to use if not.
 
-## Instant condition checkingInstant condition checking
+#### Instant condition checking
 
 You can type this to check if the condition is true or false instantly:
 
@@ -728,42 +744,41 @@ TryMeHoe[fnc] condition
 ```
 It will assign 'Yes' or 'No' to %tmhres%.
 
-# LoopsLoops
+### Loops
 
-## For loopsFor loops
 
-## Loops from m to nLoops from m to n
+##### Loops from m to n
 
 ```
 LoopStuffs[fnc] %%parameters in (start,step,end) do (
 )
 ```
-## Loops through files rooted in a folderLoops through files rooted in a folder
+##### Loops through files rooted in a folder
 
 ```
 ScanOrgans[fnc] drive/directory %%parameters in (file) do (
 )
 ```
-## Loops through strings or strings in a fileLoops through strings or strings in a file
+##### Loops through strings or strings in a file
 
 ```
 ScanLetters[fnc] drive/directory %%parameters in (string/file) do (
 )
 ```
 
-### Loops through a fileLoops through a file
+##### Loops through a file
 
 ```
 ScanDiaries[fnc] %%parameters in (set) do (
 )
 ```
-### Loops through a folderLoops through a folder
+##### Loops through a folder
 
 ```
 ScanDir[fnc] %%parameters in (folder) do (
 )
 ```
-## While loopsWhile loops
+##### While loops
 
 While loops can be created using:
 
@@ -774,21 +789,21 @@ EndSuck[fnc]
 ```
 Of course, the loops will run when the condition is still true, stop when false.
 
-### Do-While loopDo-While loop
+##### Do-While loop
 
 ```
 RepeatSuck[fnc]
 ::code
 UntilStale[fnc] condition
 ```
-### Differences between While and Do-WhileDifferences between While and Do-While
+##### Differences between While and Do-While
 
 While loop is executed only when given condition is true. Whereas, do-while loop is executed for first time irrespective of the condition. After executing while loop for
 first time, then condition is checked.
 
-### Notes when using while loopsNotes when using while loops
+##### Notes when using while loops
 
-##### YOU CAN NOT USE NESTED WHILE LOOPSYOU CAN NOT USE NESTED WHILE LOOPS
+-YOU CAN NOT USE NESTED WHILE LOOPSYOU CAN NOT USE NESTED WHILE LOOPS
 
 This will be wrong:
 
@@ -800,7 +815,7 @@ EndSuck[fnc]
 ```
 (Same with Do-While)(Same with Do-While)
 
-## The better way for loopsThe better way for loops
+##### The better way for loops
 
 You can use somewhat "recursion" like this:
 
@@ -831,7 +846,7 @@ EatFnc[fnc] loop
 PoopFnc[fnc] nextcode
 Swear[fnc] Done^!
 ```
-# Import pre-built librariesImport pre-built libraries
+#### Import pre-built librariesImport pre-built libraries
 
 To import a pre-built library, use:
 
@@ -840,19 +855,19 @@ Fuck[fnc] lib_name
 ```
 All libraries:
 
-#### float - Used to declare variables as float. Usage: PoopFloat[fnc] "variable_name" "value"
+##### `float` - Used to declare variables as float. Usage: PoopFloat[fnc] "variable_name" "value"
 
-# Use Batch in FreakCUse Batch in FreakC
+#### Use Batch in FreakC
 
 Unlike all the previous release, now FreakC support writing Batch without any other commands. So you can actually learn Batch and write Batch codes in FreakC.
 
-## Is adding Batch to FreakC will kill the usages of FreakC ?Is adding Batch to FreakC will kill the usages of FreakC?
+#### Is adding Batch to FreakC will kill the usages of FreakC ?
 
 Well, I would say it will and won't at the same time. What I mean is that if there is Batch in FreakC, you would definitely write Batch rather than FreakC, but actually,
 FreakC codes are just compiled to Batch anyway. The only key feature of FreakC is being an esolang with funny and dirty syntax, that's why people would want to use
 it. FreakC doesn't improve Batch, it's just a funny version of it.
 
-# Nul in FreakCNul in FreakC
+#### Nul in FreakC
 
 It's just like nul in Batch, so if you want to make your console not print out any process, you can do it like this:
 
@@ -864,7 +879,7 @@ To hide errors, you can do this:
 ```
 Command >nul 2>nul
 ```
-# Creating and Inserting modulesCreating and Inserting modules
+#### Creating and Inserting modules
 
 You can create a module file using:
 
@@ -881,7 +896,7 @@ InsertShits[fnc] module_name.bat
 ```
 Then, compile the module file first, then compile the main file at the end.
 
-## Example:Example:
+##### Example
 
 Create a file called "module.fclang" with:
 
@@ -910,7 +925,7 @@ World
 ```
 If you are a C++ dev, this would be an equivalent to "#include".
 
-## Better wayBetter way
+##### Better way
 
 If you don't want to merge all the codes into one file (as FreakC uses a lot of labels), you can simply:
 
@@ -921,7 +936,7 @@ If you don't want to merge all the codes into one file (as FreakC uses a lot of 
 ```
 A demo can be found here.
 
-# Find strings in a fileFind strings in a file
+- Find strings in a file
 
 FindShits[fnc]:
 
@@ -994,186 +1009,187 @@ xyz\> Word position: end of word
 
 # Other useful commandsOther useful commands
 
-## Exit the programExit the program
+#### Exit the program
 
 ```
 Die[fnc]
 ```
-## Shutdown systemShutdown system
+#### Shutdown system
 
 ```
 ShutdownSystem[fnc]
 ::Add /t time and /c "comment" to set the time to shutdown and leave a comment before shutdown
 ```
-## Restart systemRestart system
+#### Restart system
 
 ```
 RestartSystem[fnc]
 ::Add /t time and /c "comment" to set the time to shutdown and leave a comment before restart
 ```
-## Create a folderCreate a folder
+#### Create a folder
 
 
 ```
 PukeDir[fnc] folder_name
 ```
-### Access a folderAccess a folder
+#### Access a folder
 
 ```
 EatDir[fnc] folder_name
 ```
-### Access a driveAccess a drive
+#### Access a drive
 
 ```
 EatDrive[fnc] drive_name
 ```
-### Read a fileRead a file
+#### Read a file
 
 ```
 StealDiary[fnc] file_name
 ```
-### Clear the screenClear the screen
+
+#### Utilities
+
+##### Clear the screen
 
 ```
 Forget[fnc]
 ```
-### PausePause
+##### Pause
 
 ```
 GotoToilet[fnc]
 ```
-### Delete a fileDelete a file
+##### Delete a file
 
 ```
 Trash[fnc]
 ```
-### Delete a folderDelete a folder
+##### Delete a folder
 
 ```
 TrashDir[fnc] folder_name
 ```
-### Check if a number is odd or is evenCheck if a number is odd or is even
+##### Check if a number is odd or is even
 
 ```
 OddOrEven[fnc] number
 ```
-### Change color, a pair of hex code is a color codeChange color, a pair of hex code is a color code
+##### Change color, a pair of hex code is a color code
 
 ```
 ChangeColor[fnc] hex_code
 ```
-#### 0 = Black
+- 0 = Black
 
-#### 1 = Blue
+- 1 = Blue
 
-#### 2 = Green
+- 2 = Green
 
-#### 3 = Aqua
+- 3 = Aqua
 
-#### 4 = Red
+- 4 = Red
 
-#### 5 = Purple
+- 5 = Purple
 
-#### 6 = Yellow
+- 6 = Yellow
 
-#### 7 = White
+- 7 = White
 
-#### 8 = Gray
+- 8 = Gray
 
-#### 9 = Light Blue
+- 9 = Light Blue
 
-#### A = Light Green
+- A = Light Green
 
-#### B = Light Aqua
+- B = Light Aqua
 
-#### C = Light Red
+- C = Light Red
 
-#### D = Light Purple
+- D = Light Purple
 
-#### E = Light Yellow
+- E = Light Yellow
 
-#### F = Bright White
+-F = Bright White
 
-### Change the title of the programChange the title of the program
+##### Change the title of the program
 
 
 ```
 ChangeName[fnc] title_name
 ```
-### Change console's sizeChange console's size
+##### Change console's size
 
 ```
 ChangeSize[fnc] size_number
 ChangeSize[fnc] con cols=columns_or_width lines=lines_or_height
 ```
-### Rename a fileRename a file
+##### Rename a file
 
 ```
 RenameFile[fnc] file_name
 ```
-### Move a file to the new pathMove a file to the new path
+##### Move a file to the new path
 
 ```
 MoveFile[fnc] file_name new_path
 ```
-### Copy a file to the new pathCopy a file to the new path
+##### Copy a file to the new path
 
 ```
 CopyFile[fnc] file_name new_path
 ```
-### Open a file or a website url (would open cmd if nothing is opened)Open a file or a website url (would open cmd if nothing is opened)
+##### Open a file or a website url (would open cmd if nothing is opened)
 
 ```
 PlayFile[fnc] file
 ```
-### Timeout for a specific timeTimeout for a specific time
-
+##### Timeout for a specific time
 ```
 WaitForBus[fnc] time_as_second
 ```
-### Restart the program or loop the program endlesslyRestart the program or loop the program endlessly
+##### Restart the program or loop the program endlessly
 
 ```
 Loop[fnc]
 ```
-### Shows dateShows date
+##### Shows date
 
 ```
 SeeDate[fnc]
 ```
-### Shows timeShows time
+##### Shows time
 
 ```
 SeeTime[fnc]
 ```
-### Shows all files in the current directoryShows all files in the current directory
+##### Shows all files in the current directory
 
 ```
 MyMemory[fnc]
 ```
-### Show command prompt contentShow command prompt content
-
+##### Show command prompt content
 ```
 EnableCoolStuff[fnc]
 ```
 This would be useful for debugging.This would be useful for debugging.
 
-### Hide command prompt contentHide command prompt content
+##### Hide command prompt content
 
 ```
 DisableCoolStuff[fnc]
 ```
 
-Note: All the command prompt content is hiden by defaultNote: All the command prompt content is hiden by default
+> Note: All the command prompt content is hiden by defaultNote: All the command prompt content is hiden by default
 
-## Prompt for date to change datePrompt for date to change date
+##### Prompt for date to change date
 
 ```
 BuyCalender[fnc]
 ```
-Note: Administrator is required to run the commandNote: Administrator is required to run the command
+> Note: Administrator is required to run the commandNote: Administrator is required to run the command
 
-## Prompt for time to change timePrompt for time to change time
+##### Prompt for time to change time
 
 ```
 BuyClock[fnc]
