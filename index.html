@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Freak-C</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Freak-C</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cli-usage">CLI Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#interactive-shell">Interactive shell</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#startfuckincli">StartFuckin[cli]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stopfuckincli">StopFuckin[cli]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wipeasscli">WipeAss[cli]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shitcli">Shit[cli]</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#development-environment">Development environment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vscode">VSCode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sublime-text">Sublime text</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#language">Language</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#print-text-with-swearfnc">Print text with Swear[fnc]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#store-data-with-swearfnc">Store Data with Swear[fnc]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#special-characters">Special characters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unicode-characters">Unicode characters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prints-out-commands-text">Prints out command's text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#first-note">First note</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variables-and-data-types">Variables and data types</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#data-types">Data types</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#variables">Variables</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maths">Maths</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#-grouping">() - grouping</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-unary-operators">! ~ - - unary operators</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-arithmetic-operators">* / % - arithmetic operators</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-arithmetic-operators_1">+ - - arithmetic operators</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-logical-shift">&lt;&lt; &gt;&gt; - logical shift</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-bitwise-and">&amp; - bitwise and</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-bitwise-exclusive-or">^ - bitwise exclusive or</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-bitwise-or">| - bitwise or</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-assignment">= *= /= %= += -= - assignment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-expression-separator">&amp;= ^= |= &lt;&lt;= &gt;&gt;= , - expression separator</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-plusminus-1">++ -- - plus/minus 1</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#some-math-commands">Some Math commands</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#local-and-global-variableslocal-and-global-variables">Local and global variablesLocal and global variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#special-variables">Special variables</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#numpiss">%numpiss%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#numpuke">%numpuke%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#numpoop">%numpoop%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#numdiarrhea">%numdiarrhea%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#numbutt">%numbutt%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#time">%time%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#date">%date%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cd">%cd%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#errorlevel">%errorlevel%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cmdextversion">%cmdextversion%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cmdcmdline">%cmdcmdline%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#path">%path%</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#highestnumanodenumber">%highestnumanodenumber%</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementations-on-variables">Implementations on variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#another-way-to-declare-variables">Another way to declare variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#embed-freakc-commands-to-variables">Embed FreakC commands to variables</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comments">Comments</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#single-line-comment">Single-line comment:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#multi-line-comment">Multi-line comment:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#labels-and-goto-statement">Labels and Goto statement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#differences-between-eatfncfnc-and-grabfncfnc">Differences between EatFnc[fnc] and GrabFnc[fnc]</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#notes_1">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#object-oriented-programming">Object Oriented Programming</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#conditionals">Conditionals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparison-operators">Comparison operators</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-kinds-or-if-statements">Other kinds or if statements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#execute-if-a-file-exists">Execute if a file exists</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#execute-if-a-variable-is-defined">Execute if a variable is defined</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#execute-if-a-condition-is-false">Execute if a condition is false</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#else">Else</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notes_2">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pressing-keys-with-respond">Pressing keys with respond</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#if-not-for-tapping">If not for tapping</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instant-condition-checking">Instant condition checking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loops">Loops</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#loops-from-m-to-n">Loops from m to n</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops-through-files-rooted-in-a-folder">Loops through files rooted in a folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops-through-strings-or-strings-in-a-file">Loops through strings or strings in a file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops-through-a-file">Loops through a file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops-through-a-folder">Loops through a folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#while-loops">While loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#do-while-loop">Do-While loop</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#differences-between-while-and-do-while">Differences between While and Do-While</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notes-when-using-while-loops">Notes when using while loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-better-way-for-loops">The better way for loops</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#import-pre-built-librariesimport-pre-built-libraries">Import pre-built librariesImport pre-built libraries</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#float-used-to-declare-variables-as-float-usage-poopfloatfnc-variable_name-value">float - Used to declare variables as float. Usage: PoopFloat[fnc] "variable_name" "value"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-batch-in-freakc">Use Batch in FreakC</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#is-adding-batch-to-freakc-will-kill-the-usages-of-freakc">Is adding Batch to FreakC will kill the usages of FreakC ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nul-in-freakc">Nul in FreakC</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-and-inserting-modules">Creating and Inserting modules</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#better-way">Better way</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-useful-commands">Other useful commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-the-program">Exit the program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shutdown-system">Shutdown system</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restart-system">Restart system</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-folder">Create a folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#access-a-folder">Access a folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#access-a-drive">Access a drive</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#read-a-file">Read a file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#utilities">Utilities</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#clear-the-screen">Clear the screen</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pause">Pause</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delete-a-file">Delete a file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delete-a-folder">Delete a folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#check-if-a-number-is-odd-or-is-even">Check if a number is odd or is even</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-color-a-pair-of-hex-code-is-a-color-code">Change color, a pair of hex code is a color code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-the-title-of-the-program">Change the title of the program</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-consoles-size">Change console's size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rename-a-file">Rename a file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-a-file-to-the-new-path">Move a file to the new path</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#copy-a-file-to-the-new-path">Copy a file to the new path</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#open-a-file-or-a-website-url-would-open-cmd-if-nothing-is-opened">Open a file or a website url (would open cmd if nothing is opened)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#timeout-for-a-specific-time">Timeout for a specific time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#restart-the-program-or-loop-the-program-endlessly">Restart the program or loop the program endlessly</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shows-date">Shows date</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shows-time">Shows time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shows-all-files-in-the-current-directory">Shows all files in the current directory</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#show-command-prompt-content">Show command prompt content</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hide-command-prompt-content">Hide command prompt content</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#prompt-for-date-to-change-date">Prompt for date to change date</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#prompt-for-time-to-change-time">Prompt for time to change time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#open-powershell">Open powershell</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#disable-prebuilt-variables">Disable prebuilt variables</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#meme-and-j4f-commands">Meme and J4F commands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#patrick-functions">Patrick functions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dani-functions">Dani functions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#spongebob-functions">SpongeBob functions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rick-ashley-the-legend">Rick Ashley the legend</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#collections-of-stupid-quotes">Collections of stupid quotes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#prints-out-random-numbers-continously-like-in-the-matrixprints-out-random-numbers-continously-like-in-the-matrix">Prints out random numbers continously (like in the Matrix)Prints out random numbers continously (like in the Matrix)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#java-and-json-supports">Java and JSON supports :)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#equivalent-with-batch">Equivalent with Batch</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#swearfnc-echo">Swear[fnc] - echo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#swearlinefnc-echo">SwearLine[fnc] - echo.</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#poopintfnc-set-a">PoopInt[fnc] - set /a</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#poopstringfnc-set">PoopString[fnc] - set</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#poopinputfnc-set-p">PoopInput[fnc] - set /p</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#poopfncfnc-label">PoopFnc[fnc] - :label</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#grabfncfnc-goto">GrabFnc[fnc] - goto</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shittyp-set">Shit[typ] - set</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#puketyp-set-a">Puke[typ] - set /a</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cumtyp-label">Cum[typ] - :label</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pisstyp-set-p">Piss[typ] - set /p</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loopstuffsfnc-for-l">LoopStuffs[fnc] - for /l</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scanorgansfnc-for-r">ScanOrgans[fnc] - for /r</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scanlettersfnc-for-f">ScanLetters[fnc] - for /f</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scandiariesfnc-for">ScanDiaries[fnc] - for</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scandirfnc-for-d">ScanDir[fnc] - for /d</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doiffnc-if">DoIf[fnc] - if</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doifexistfnc-if-exist">DoIfExist[fnc] - if exist</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doifdefinedfnc-if-defined">DoIfDefined[fnc] - if defined</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doiffalsefnc-if-not">DoIfFalse[fnc] - if not</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doifnotexistfnc-if-not-exist">DoIfNotExist[fnc] - if not exist</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doifnotdefinedfnc-if-not-defined">DoIfNotDefined[fnc] - if not defined</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doiftapfnc-if-errorlevel">DoIfTap[fnc] - if errorlevel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doifnottapfnc-if-not-errorlevel">DoIfNotTap[fnc] - if not errorlevel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tapsomeshtfnc-choice-c-n">TapSomeSht[fnc] - choice /c: /n</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ornotfnc-else">OrNot[fnc] - else</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#gototoiletfnc-pause">GotoToilet[fnc] - pause</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#diefnc-exit">Die[fnc] - exit</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shutdownsystemfnc-shutdown-s">ShutdownSystem[fnc] - shutdown -s</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#restartsystemfnc-shutdown-r">RestartSystem[fnc] - shutdown -r</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pukedirfnc-md">PukeDir[fnc] - md</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eatdirfnc">EatDir[fnc]</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eatdrivefnc-drive">EatDrive[fnc] - drive:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#stealdiaryfnc-type">StealDiary[fnc] - type</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#grabfncfnc-call">GrabFnc[fnc] - call</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#trashfnc-del">Trash[fnc] - del</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#trashdirfnc-rmdir">TrashDir[fnc] - rmdir</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#changecolorfnc-color">ChangeColor[fnc] - color</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#changenamefnc-title">ChangeName[fnc] - title</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#changesizefnc-mode">ChangeSize[fnc] - mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#renamefilefnc-ren">RenameFile[fnc] - ren</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#movefilefnc-move">MoveFile[fnc] - move</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#copyfilefnc-copy">CopyFile[fnc] - copy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#playfilefnc-start">PlayFile[fnc] - start</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#waitforbusfnc-timeout">WaitForBus[fnc] - timeout</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#seedatefnc-date-t">SeeDate[fnc] - date /t</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#seetimefnc-time-t">SeeTime[fnc] - time /t</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mymemoryfnc-dir">MyMemory[fnc] - dir</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#enablecoolstufffnc-echo-off">EnableCoolStuff[fnc] - @echo off</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#disablecoolstufffnc-echo-on">DisableCoolStuff[fnc] - @echo on</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#buycalenderfnc-date">BuyCalender[fnc] - date</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#buyclockfnc-time">BuyClock[fnc] - time</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#openhousefnc-setlocal">OpenHouse[fnc] - setlocal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#closehousefnc-endlocal">CloseHouse[fnc] - endlocal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#findtrashfnc-findstr">FindTrash[fnc] - findstr</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#findshitsfnc-find">FindShits[fnc] - find</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Freak-C</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="home">Home</h2>
+<p>Freak-C lang, the programming language for drunk programmers</p>
+<h3 id="installation">Installation</h3>
+<p>There are many ways to install FreakC, you can:</p>
+<ul>
+<li>Clone FreakC from Github using:</li>
+</ul>
+<pre><code class="language-sh">git clone https://github.com/nguyenphuminh/FreakC.git
+</code></pre>
+<h3 id="cli-usage">CLI Usage</h3>
+<p>In the "FreakC" folder, open cmd and type this command to compile and run the code:</p>
+<pre><code class="language-sh">freakc &lt;file-name&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-sh">freakc &quot;Examples/HelloWorld.fclang&quot;
+</code></pre>
+<p>If you want to compile the code only, type:</p>
+<pre><code>freakc file_name --compile
+</code></pre>
+<p>If you want to compile the code and show the compiled code, type:</p>
+<pre><code>freakc file_name --candr
+</code></pre>
+<p>To show the current version of the devkit, type:</p>
+<pre><code>freakc --version
+</code></pre>
+<p>To create a new FreakC project quickly, you can type:</p>
+<pre><code>freakc project_name --create
+</code></pre>
+<p>Notice that it will generate a file with a Hello World example in it, if you just want to create an empty file, type:</p>
+<pre><code>freakc project_name --create --empty
+</code></pre>
+<p>To show all options and usage, type:</p>
+<pre><code>freakc --help
+</code></pre>
+<p>To show all options and usage (with a dumb ascii art), type:</p>
+<pre><code>freakc
+</code></pre>
+<h3 id="interactive-shell">Interactive shell</h3>
+<p>To open interactive shell, type:</p>
+<pre><code>freakc --shell
+::Or fcshell
+</code></pre>
+<p>You can type in whatever you want, it will be stored in <code>tar.fclang</code>. You can type in any of these commands to execute tasks:</p>
+<h4 id="startfuckincli">StartFuckin[cli]</h4>
+<p>Runs all the codes written</p>
+<h4 id="stopfuckincli">StopFuckin[cli]</h4>
+<p>Delete tar.fclang and exit</p>
+<h4 id="wipeasscli">WipeAss[cli]</h4>
+<p>Resets codes</p>
+<h4 id="shitcli">Shit[cli]</h4>
+<p>Clear console</p>
+<h3 id="development-environment">Development environment</h3>
+<h4 id="vscode">VSCode</h4>
+<p>Download the <code>FreakC</code> extension from the <a href="https://marketplace.visualstudio.com/items?itemName=FreakC.freakc">Marketplace</a> and you are ready to go! The extension provides syntax-highlighting as well as code auto-completion. You can find the source code of the extension right <a href="https://github.com/FreakC-Foundation/FreakC-vscode">here</a>.</p>
+<h4 id="sublime-text">Sublime text</h4>
+<ul>
+<li>Added FreakC to the <code>PATH</code> environment variable</li>
+<li>Copy and paste this code snippet in <code>C:\Users\&lt;username&gt;\AppData\Roaming\Sublime Text 3\Packages\User</code></li>
+</ul>
+<pre><code class="language-sublime-build">{
+    &quot;cmd&quot;: [&quot;FreakC&quot;,&quot;$file&quot;]
+}
+</code></pre>
+<p>For syntax highlighting, copy <a href="https://github.com/FreakC-Foundation/FreakC/tree/master/Utilities/Scripts/FreakC">this</a> folder in the same folder, then paste it in <code>%APPDATA%\Sublime Text v\Packages\</code>.</p>
+<h3 id="language">Language</h3>
+<h4 id="print-text-with-swearfnc">Print text with Swear[fnc]</h4>
+<p>To print out a string or text, you use:</p>
+<pre><code>Swear[fnc] string
+</code></pre>
+<p>or you can prints text using:</p>
+<pre><code>SwearLine[fnc] string
+</code></pre>
+<p>The differences between Swear[fnc] and SwearLine[fnc] is that Swear[fnc] prints out normal text, if there are no text printed out, there might be some errors. But
+SwearLine[fnc] prints out a space then a text, if nothing is printed out, it will add a new line.</p>
+<h4 id="store-data-with-swearfnc">Store Data with Swear[fnc]</h4>
+<p>You can actually store data to a file by using:</p>
+<pre><code>Swear[fnc] data&gt;&gt;file
+</code></pre>
+<h4 id="special-characters">Special characters</h4>
+<p>Unlike any characters, "!" requires "^", for example:</p>
+<pre><code>::This would causes no errors
+Swear[fnc] @#/
+</code></pre>
+<pre><code>::This would cause error (&quot;!&quot; will not be shown)
+Swear[fnc]!
+</code></pre>
+<pre><code>::Correct codes:
+Swear[fnc] ^!
+</code></pre>
+<p>The reason for this is that FreakC has: SETLOCAL ENABLEDELAYEDEXPANSION which causes "!" to not be used properly.</p>
+<h4 id="unicode-characters">Unicode characters</h4>
+<p>To start using Unicode character, type:</p>
+<pre><code>FuckUnicode[fnc] &gt;nul
+</code></pre>
+<p>So now you can use Unicode characters:</p>
+<pre><code>FuckUnicode[fnc] &gt;nul
+Swear[fnc] ă ê ©
+:: Would print out &quot;ă ê ©&quot;
+</code></pre>
+<h4 id="prints-out-commands-text">Prints out command's text</h4>
+<p>If you type:</p>
+<pre><code>Swear[fnc] Swear[fnc]
+</code></pre>
+<p>It won't print out "Swear[fnc]", but it will print out "echo", because FreakC will compiles any statement/command without caring if it's a used data or not. So to actually
+print out "Swear[fnc]", you will need to add "^" in any place of the command. Example:</p>
+<pre><code>Swear[fnc] S^wear[fnc]
+:: This will print out &quot;Swear[fnc]&quot;
+</code></pre>
+<h4 id="first-note">First note</h4>
+<p>To pause in FreakC, please type in:</p>
+<pre><code>GotoToilet[fnc]
+</code></pre>
+<p>You will see this command underneath, but you should you this command to pause your program.</p>
+<h4 id="variables-and-data-types">Variables and data types</h4>
+<h5 id="data-types">Data types</h5>
+<p>There are three data types in FreakC: <code>integer</code>, <code>string</code>.</p>
+<h5 id="variables">Variables</h5>
+<p>To declare a variable, you use:</p>
+<pre><code>PoopString[fnc] variable_name=string_value
+</code></pre>
+<p>Or:</p>
+<pre><code>PoopString[fnc] &quot;variable_name=string_value&quot;
+</code></pre>
+<p>To do math equations, you use:</p>
+<pre><code>PoopInt[fnc] variable_name=equation
+</code></pre>
+<p>Note that PoopInt[fnc] will always round up number, to do equation or to declare a variable as a float, do:</p>
+<pre><code>:: Import float
+Fuck[fnc] float
+PoopFloat[fnc] &quot;variable_name&quot; &quot;equation&quot;
+</code></pre>
+<p>To declare a variable as an array, you use:</p>
+<pre><code>data_type arr[array_index]=
+</code></pre>
+<p>Ex:</p>
+<pre><code>PoopString[fnc] arr[0]=Hello
+PoopInt[fnc] arr[1]=
+</code></pre>
+<p>Note: There is no real Array in FreakC, the reason for naming arr[index] is to run for loops easier for all those "fake elements of a fake Array".Note: There is no real Array in FreakC, the reason for naming arr[index] is to run for loops easier for all those "fake elements of a fake Array".</p>
+<p>To declare a variable from user's input, you use:</p>
+<pre><code>PoopInput[fnc] variable_name=
+</code></pre>
+<p>Note: If you do this, it will prints out "Enter name:" right next to the input</p>
+<pre><code>PoopInput[fnc] variable_name=Enter name:
+</code></pre>
+<h4 id="maths">Maths</h4>
+<p>You can do Math equations with FreakC like this:</p>
+<pre><code>PoopInt[fnc] result=1+1+2+
+</code></pre>
+<p>If you do this, variable "result" will be "Hel + lo"</p>
+<pre><code>PoopString[fnc] result=Hel + lo
+</code></pre>
+<p>Math operatorsMath operators</p>
+<h5 id="-grouping"><code>()</code> - grouping</h5>
+<h5 id="-unary-operators"><code>! ~</code> - - unary operators</h5>
+<h5 id="-arithmetic-operators"><code>* / %</code> - arithmetic operators</h5>
+<h5 id="-arithmetic-operators_1"><code>+ -</code> - arithmetic operators</h5>
+<h5 id="-logical-shift"><code>&lt;&lt; &gt;&gt;</code> - logical shift</h5>
+<h5 id="-bitwise-and"><code>&amp;</code> - bitwise and</h5>
+<h5 id="-bitwise-exclusive-or"><code>^</code> - bitwise exclusive or</h5>
+<h5 id="-bitwise-or"><code>|</code> - bitwise or</h5>
+<h5 id="-assignment"><code>= *= /= %= += -=</code> - assignment</h5>
+<h5 id="-expression-separator"><code>&amp;= ^= |= &lt;&lt;= &gt;&gt;= ,</code> - expression separator</h5>
+<h5 id="-plusminus-1"><code>++ --</code> - plus/minus 1</h5>
+<h5 id="some-math-commands">Some Math commands</h5>
+<h6 id="make-a-number-squared">Make a number squared</h6>
+<pre><code>SquareMyBois[fnc] variable_without_%%
+</code></pre>
+<h6 id="make-a-number-cubed">Make a number cubed</h6>
+<pre><code>CubeMyBois[fnc] variable_without_%%
+</code></pre>
+<h6 id="print-out-an-equationprint-out-an-equation">Print out an equation:Print out an equation:</h6>
+<pre><code>FuckUp[fnc] equation
+</code></pre>
+<h6 id="assign-the-result-of-an-equation-to-fhsolvedassign-the-result-of-an-equation-to-fhsolved">Assign the result of an equation to %fhsolved%Assign the result of an equation to %fhsolved%</h6>
+<pre><code>FuckUpLess[fnc] equation
+</code></pre>
+<h6 id="merge-strings">Merge strings</h6>
+<p>To merge strings, do this:</p>
+<pre><code>PoopString[fnc] str1=Hello
+PoopString[fnc] str2=World
+PoopString[fnc] str=%str1% %str2%
+</code></pre>
+<p>So the value of %str% is "Hello World"</p>
+<p>Don't merge string like this:</p>
+<pre><code>PoopString[fnc] str1=Hello
+PoopString[fnc] str2=World
+PoopString[fnc] str=%str1% + %str2%
+</code></pre>
+<p>This time, the value will be "Hello + World"</p>
+<h6 id="use-variables-in-different-commands">Use variables in different commands</h6>
+<p>You can use variables in FreakC commands as %variable_name%</p>
+<p>For example, to print out a variable, you can do this:</p>
+<pre><code>PoopString[fnc] result=Hello World^!
+Swear[fnc] %result%
+</code></pre>
+<p>But, to print out an element of an array, you use:</p>
+<pre><code>PoopString[fnc] a[0]=Hello
+Swear[fnc] %a[0]%
+</code></pre>
+<p>To print out every element of an array, you can write something like this:</p>
+<pre><code>OpenHouse[fnc] ENABLEDELAYEDEXPANSION
+PoopInt[fnc] a[0]=
+PoopInt[fnc] a[1]=
+PoopInt[fnc] a[2]=
+LoopStuffs[fnc] %%n in (0,1,2) do (
+Swear[fnc] ^!a[%%n]^!
+)
+</code></pre>
+<p>Actually, there is a whole another way to create an array:</p>
+<pre><code>PoopString[fnc] arr=1 2 3 4 5
+ScanLetters[fnc] %%i in (%arr%) do (
+::Print out every elements
+Swear[fnc] %%i
+)
+</code></pre>
+<h4 id="local-and-global-variableslocal-and-global-variables">Local and global variablesLocal and global variables</h4>
+<p>You can declare a global variable by just using all the ways mentioned recently.</p>
+<p>To declare a variable locally, you will need to use:</p>
+<pre><code>OpenHouse[fnc]
+PoopInt[fnc] ans=
+CloseHouse[fnc]
+</code></pre>
+<p>OpenHouse[fnc] and CloseHouse[fnc] helps create a local environment.</p>
+<p>In Batch, to use variable in for loops, or enables command prosessor's extensions, you would need:</p>
+<pre><code>setlocal ENABLEDELAYEDEXPANSION
+setlocal ENABLEEXTENSIONS
+</code></pre>
+<p>You can also do that with OpenHouse[fnc]</p>
+<pre><code>OpenHouse[fnc] ENABLEDELAYEDEXPANSION
+OpenHouse[fnc] ENABLEEXTENSIONS
+</code></pre>
+<p>Note: DELAYEDEXPANSION is already enabled in FreakC. So you wouldn't need to enable it actually.Note: DELAYEDEXPANSION is already enabled in FreakC. So you wouldn't need to enable it actually.</p>
+<h4 id="special-variables">Special variables</h4>
+<h5 id="numpiss"><code>%numpiss%</code></h5>
+<p>A variable with the value as random numbers from 1 to 9</p>
+<h5 id="numpuke"><code>%numpuke%</code></h5>
+<p>A variable with the value as random numbers from 1 to 99</p>
+<h5 id="numpoop"><code>%numpoop%</code></h5>
+<p>A variable with the value as random numbers from 1 to 999</p>
+<h5 id="numdiarrhea"><code>%numdiarrhea%</code></h5>
+<p>A variable with the value as random numbers from 1 to 9999</p>
+<h5 id="numbutt"><code>%numbutt%</code></h5>
+<p>A variable with the value as random numbers from 1 to 99999</p>
+<h5 id="time"><code>%time%</code></h5>
+<p>A variable with the value as the current timer</p>
+<h5 id="date"><code>%date%</code></h5>
+<p>A variable with the value as the current date</p>
+<h5 id="cd"><code>%cd%</code></h5>
+<p>A variable with the value as the current directory</p>
+<h5 id="errorlevel"><code>%errorlevel%</code></h5>
+<p>A variable with the value as the current Batch errorlevel value</p>
+<h5 id="cmdextversion"><code>%cmdextversion%</code></h5>
+<p>A variable with the value as the current Command Processor Extensions version number</p>
+<h5 id="cmdcmdline"><code>%cmdcmdline%</code></h5>
+<p>A variable with the value as the original command line that invoked the Command Processor</p>
+<h5 id="path"><code>%path%</code></h5>
+<p>A variable with the value as all environment variables</p>
+<h5 id="highestnumanodenumber"><code>%highestnumanodenumber%</code></h5>
+<p>A variable with the value as the highest NUMA node number on this machine</p>
+<p>There are a lot of special variables left, but you might not find uses for them</p>
+<h4 id="implementations-on-variables">Implementations on variables</h4>
+<p><code>%variable_name:~0,-2%</code> - would extract all but the last 2 characters of the variable</p>
+<p><code>%variable_name:~-5%</code> - would extract the last 5 characters of the variable</p>
+<p><code>%variable_name:~5%</code> - would remove the first 5 characters of the variable</p>
+<p><code>%variable_name:str1=str2%</code> - would replace str1 with str</p>
+<p><code>%PATH:~10,5%</code> - would expand the PATH environment variable, and then use only the 5 characters that begin at the 11th (offset 10)</p>
+<p>character of the expanded result. If the length is not specified, then it defaults to the remainder of the variable value. If either number (offset or</p>
+<p>length is negative, then the number used is the length of the environment variable value added to the offset or length specified/li&gt;</p>
+<h4 id="another-way-to-declare-variables">Another way to declare variables</h4>
+<p><code>Shit[typ]</code> - Declare a variable as a string</p>
+<p><code>Puke[typ]</code> - Declare a variable as an integer</p>
+<p><code>Cum[typ]</code> - Create a function/label</p>
+<p><code>Piss[typ]</code> - Declare a variable from user's input</p>
+<p><code>Jelly[typ]</code> - Declare a variable as a float</p>
+<p>And if you're asking yourself why add more dumb commands like this, well, because FreakC's bs.</p>
+<h4 id="embed-freakc-commands-to-variables">Embed FreakC commands to variables</h4>
+<p>In Batch, you can do this to print out Hello:</p>
+<pre><code>set stuff=echo Hello
+%stuff%
+</code></pre>
+<p>In FreakC, if you do this, you would get errors</p>
+<pre><code>PoopString[fnc] stuff=Swear[fnc] Hello
+%stuff%
+</code></pre>
+<p>You should type:</p>
+<pre><code>PoopString[fnc] stuff= Swear[fnc] Hello
+%stuff%
+</code></pre>
+<h5 id="notes">Notes</h5>
+<p>There are variables that you CAN NOT USE like: <code>%a%</code>, <code>%printString%</code>, <code>%fccompile%</code>, <code>%fccompilename%</code>, <code>%fcread%</code>.</p>
+<p>Also, spaces in FreakC is extremely important, so if you declare a variable like this:</p>
+<pre><code>PoopInt[fnc] abc = 100
+</code></pre>
+<p>It will declare the "abc " variable, so if you prints it out like this, it will not work</p>
+<pre><code>Swear[fnc] %abc%
+</code></pre>
+<p>You will have to code like this:</p>
+<pre><code>Swear[fnc] %abc %
+</code></pre>
+<p>Then, it will prints out " 100"</p>
+<p>Other thing that you should notice is that</p>
+<pre><code>PoopString[fnc] text
+</code></pre>
+<p>would return any variable begins with "text"</p>
+<h4 id="comments">Comments</h4>
+<h5 id="single-line-comment">Single-line comment:</h5>
+<pre><code>:: Comment
+</code></pre>
+<p>Another way:</p>
+<pre><code>rem comment
+</code></pre>
+<h5 id="multi-line-comment">Multi-line comment:</h5>
+<pre><code>[cmt] comment
+[ecmt]
+</code></pre>
+<p>To write a comment that won't show up in the compiled codes, use:</p>
+<pre><code>[hcmt] comment
+</code></pre>
+<h4 id="labels-and-goto-statement">Labels and Goto statement</h4>
+<p>Labels helps you to jump to a state or pass parameters to execute tasks (somewhat procedural programming).</p>
+<p>To create a label/procedure, you use:</p>
+<pre><code>PoopFnc[fnc] label_name
+</code></pre>
+<p>To jump to a label, you use:</p>
+<pre><code>EatFnc[fnc] label_name
+</code></pre>
+<p>To call a label/procedure, you use:</p>
+<pre><code>GrabFnc[fnc] :label_name
+</code></pre>
+<p>Or:</p>
+<pre><code>LickFnc[fnc] label_name
+</code></pre>
+<p>GrabFnc[fnc] can also targets file, while LickFnc[fnc] can only targets label/function. For example, you can execute files like this:</p>
+<pre><code>GrabFnc[fnc] file_name
+</code></pre>
+<h4 id="differences-between-eatfncfnc-and-grabfncfnc">Differences between EatFnc[fnc] and GrabFnc[fnc]</h4>
+<p>EatFnc[fnc] jumps to a function and will not execute the previous code while GrabFnc[fnc] use code from the function but still execute the previous code.</p>
+<p>Also, GrabFnc[fnc] also supports parameters, which helps you a lot of time.</p>
+<p>For examples, this code will print the sum of two parameters:</p>
+<pre><code>GrabFnc[fnc] :plus 1 2
+PoopFnc[fnc] plus
+PoopInt[fnc] ans=%~1 + %~
+Swear[fnc] %ans%
+</code></pre>
+<p>Note: Parameters in FreakC are %~1, %~2,...</p>
+<h5 id="notes_1">Notes</h5>
+<p>To restart the program, you can type:</p>
+<pre><code>EatFnc[fnc] FreakCCompiled
+</code></pre>
+<p>It is because the compiled code of FreakC is in a main label/procedure "FreakCCompiled"</p>
+<p>This code would still work eventhough it contains special character</p>
+<pre><code>PoopFnc[fnc] dsasd$ 123213 323
+EatFnc[fnc] dsasd$ 123213 323
+</code></pre>
+<h4 id="object-oriented-programming">Object Oriented Programming</h4>
+<p>There is no such thing as "OOP on FreakC", but you can fake one, like this:</p>
+<pre><code>::Call the function &quot;Car&quot; with parameters to declares elements
+GrabFnc[fnc] :Car &quot;supercar&quot; &quot;20&quot; &quot;special&quot;
+</code></pre>
+<pre><code>::Would print out the element &quot;gas&quot; of &quot;supercar&quot;
+Swear[fnc] %supercar.gas%
+</code></pre>
+<pre><code>::Would create a function called &quot;Car&quot;, then pass all the parameters to the new variables.
+PoopFnc[fnc] Car
+DoIfFalse[fnc] &quot;%~1&quot; == &quot;&quot; DoIfFalse[fnc] &quot;%~2&quot; == &quot;&quot; DoIfFalse[fnc] &quot;%~3&quot; == &quot;&quot; (
+PoopString[fnc] %~1.gas=%~
+PoopString[fnc] %~1.model=%~
+)
+Die[fnc] /b 0
+</code></pre>
+<h4 id="conditionals">Conditionals</h4>
+<p>To use if statement, type:</p>
+<pre><code>DoIf[fnc] condition command_to_execute
+</code></pre>
+<p>Example:</p>
+<pre><code>PoopInt[fnc] abc=
+DoIf[fnc] %abc% == 100 (
+Swear[fnc] abc is equal to 100
+)
+</code></pre>
+<p>You can actually use a Batch command in DoIf[fnc]. Example:</p>
+<pre><code>PoopInt[fnc] abc=
+DoIf[fnc] %abc% == 20 (
+echo abc is equal to 100
+)
+</code></pre>
+<h4 id="comparison-operators">Comparison operators</h4>
+<p><code>==</code> - Equal
+<code>EQU</code> - Equal
+<code>NEQ</code> - Not equal
+<code>LSS</code> - Less than
+<code>LEQ</code> - Less than or equal
+<code>GTE</code> - Greater than
+<code>GEQ</code> - Greater than or equal</p>
+<h4 id="other-kinds-or-if-statements">Other kinds or if statements</h4>
+<h5 id="execute-if-a-file-exists">Execute if a file exists</h5>
+<pre><code>DoIfExist[fnc] file_name (
+command_to_execute
+)
+</code></pre>
+<h5 id="execute-if-a-variable-is-defined">Execute if a variable is defined</h5>
+<pre><code>DoIfDefined[fnc] variable_name (
+command_to_execute
+)
+</code></pre>
+<h5 id="execute-if-a-condition-is-false">Execute if a condition is false</h5>
+<pre><code>DoIfFalse[fnc] condtition (
+command_to_execute
+)
+</code></pre>
+<h5 id="else">Else</h5>
+<pre><code>DoIf[fnc] condition (
+command_to_execute
+) OrNot[fnc] (
+command_to_execute
+)
+</code></pre>
+<h5 id="notes_2">Notes</h5>
+<p>To use if not for DoIfDefined[fnc] or DoIfExist[fnc], you can do this:</p>
+<pre><code>DoIfNotExist[fnc] file (
+command_to_execute
+)
+DoIfNotDefined[fnc] file (
+command_to_execute
+)
+</code></pre>
+<h4 id="pressing-keys-with-respond">Pressing keys with respond</h4>
+<p>To receive keys pressed, add:</p>
+<pre><code>TapSomeSht[fnc] key
+</code></pre>
+<p>For examples, if you want the users to press one in "wsad", type:</p>
+<pre><code>TapSomeSht[fnc] wsad
+</code></pre>
+<p>To perform any actions, you will need to use a special if statement:</p>
+<pre><code>DoIfTap[fnc] position_of_key_in_TapSomeSht[fnc]
+</code></pre>
+<p>Example:</p>
+<pre><code>TapSomeSht[fnc] wsad
+DoIfTap[fnc] 4 (
+Swear[fnc] You pressed &quot;D&quot;
+)
+DoIfTap[fnc] 3 (
+Swear[fnc] You pressed &quot;A&quot;
+)
+DoIfTap[fnc] 2 (
+Swear[fnc] You pressed &quot;S&quot;
+)
+DoIfTap[fnc] 1 (
+Swear[fnc] You pressed &quot;W&quot;
+)
+</code></pre>
+<h5 id="if-not-for-tapping">If not for tapping</h5>
+<p>You can use:</p>
+<pre><code>DoIfNotTap[fnc]
+</code></pre>
+<p>to use if not.</p>
+<h4 id="instant-condition-checking">Instant condition checking</h4>
+<p>You can type this to check if the condition is true or false instantly:</p>
+<pre><code>TryMeBtch[fnc] condition
+</code></pre>
+<p>Then, it will prints out "Yes" if true, "No" if false.</p>
+<p>For example, this will prints out "Yes"</p>
+<pre><code>TryMeBtch[fnc] &quot;hello&quot; == &quot;hello&quot;
+</code></pre>
+<p>You can also do this:</p>
+<pre><code>TryMeHoe[fnc] condition
+</code></pre>
+<p>It will assign 'Yes' or 'No' to %tmhres%.</p>
+<h4 id="loops">Loops</h4>
+<h5 id="loops-from-m-to-n">Loops from m to n</h5>
+<pre><code>LoopStuffs[fnc] %%parameters in (start,step,end) do (
+)
+</code></pre>
+<h5 id="loops-through-files-rooted-in-a-folder">Loops through files rooted in a folder</h5>
+<pre><code>ScanOrgans[fnc] drive/directory %%parameters in (file) do (
+)
+</code></pre>
+<h5 id="loops-through-strings-or-strings-in-a-file">Loops through strings or strings in a file</h5>
+<pre><code>ScanLetters[fnc] drive/directory %%parameters in (string/file) do (
+)
+</code></pre>
+<h5 id="loops-through-a-file">Loops through a file</h5>
+<pre><code>ScanDiaries[fnc] %%parameters in (set) do (
+)
+</code></pre>
+<h5 id="loops-through-a-folder">Loops through a folder</h5>
+<pre><code>ScanDir[fnc] %%parameters in (folder) do (
+)
+</code></pre>
+<h5 id="while-loops">While loops</h5>
+<p>While loops can be created using:</p>
+<pre><code>WhileSuck[fnc] condition
+::code
+EndSuck[fnc]
+</code></pre>
+<p>Of course, the loops will run when the condition is still true, stop when false.</p>
+<h5 id="do-while-loop">Do-While loop</h5>
+<pre><code>RepeatSuck[fnc]
+::code
+UntilStale[fnc] condition
+</code></pre>
+<h5 id="differences-between-while-and-do-while">Differences between While and Do-While</h5>
+<p>While loop is executed only when given condition is true. Whereas, do-while loop is executed for first time irrespective of the condition. After executing while loop for
+first time, then condition is checked.</p>
+<h5 id="notes-when-using-while-loops">Notes when using while loops</h5>
+<p>-YOU CAN NOT USE NESTED WHILE LOOPSYOU CAN NOT USE NESTED WHILE LOOPS</p>
+<p>This will be wrong:</p>
+<pre><code>WhileSuck[fnc] condition
+WhileSuck[fnc] condition
+EndSuck[fnc]
+EndSuck[fnc]
+</code></pre>
+<p>(Same with Do-While)(Same with Do-While)</p>
+<h5 id="the-better-way-for-loops">The better way for loops</h5>
+<p>You can use somewhat "recursion" like this:</p>
+<pre><code>PoopInt[fnc] i=start_number
+PoopFnc[fnc] loop
+command
+DoIf[fnc] %i% == end_number EatFnc[fnc] nextcode
+PoopInt[fnc] i++
+EatFnc[fnc] loop
+</code></pre>
+<pre><code>PoopFnc[fnc] nextcode
+command
+</code></pre>
+<p>For example, this program will print all the number from 0 to 10 then print out "Done!":</p>
+<pre><code>PoopInt[fnc] i=
+PoopFnc[fnc] loop
+Swear[fnc] %i%
+DoIf[fnc] %i% == 10 EatFnc[fnc] nextcode
+PoopInt[fnc] i++
+EatFnc[fnc] loop
+</code></pre>
+<pre><code>PoopFnc[fnc] nextcode
+Swear[fnc] Done^!
+</code></pre>
+<h4 id="import-pre-built-librariesimport-pre-built-libraries">Import pre-built librariesImport pre-built libraries</h4>
+<p>To import a pre-built library, use:</p>
+<pre><code>Fuck[fnc] lib_name
+</code></pre>
+<p>All libraries:</p>
+<h5 id="float-used-to-declare-variables-as-float-usage-poopfloatfnc-variable_name-value"><code>float</code> - Used to declare variables as float. Usage: PoopFloat[fnc] "variable_name" "value"</h5>
+<h4 id="use-batch-in-freakc">Use Batch in FreakC</h4>
+<p>Unlike all the previous release, now FreakC support writing Batch without any other commands. So you can actually learn Batch and write Batch codes in FreakC.</p>
+<h4 id="is-adding-batch-to-freakc-will-kill-the-usages-of-freakc">Is adding Batch to FreakC will kill the usages of FreakC ?</h4>
+<p>Well, I would say it will and won't at the same time. What I mean is that if there is Batch in FreakC, you would definitely write Batch rather than FreakC, but actually,
+FreakC codes are just compiled to Batch anyway. The only key feature of FreakC is being an esolang with funny and dirty syntax, that's why people would want to use
+it. FreakC doesn't improve Batch, it's just a funny version of it.</p>
+<h4 id="nul-in-freakc">Nul in FreakC</h4>
+<p>It's just like nul in Batch, so if you want to make your console not print out any process, you can do it like this:</p>
+<pre><code>Command &gt;nul
+</code></pre>
+<p>To hide errors, you can do this:</p>
+<pre><code>Command &gt;nul 2&gt;nul
+</code></pre>
+<h4 id="creating-and-inserting-modules">Creating and Inserting modules</h4>
+<p>You can create a module file using:</p>
+<pre><code>Cancer[fnc]
+</code></pre>
+<p>Note: The "Cancer[fnc]" command needs to stay at the top of the file.</p>
+<p>Then, include it in the main file using:</p>
+<pre><code>InsertShits[fnc] module_name.bat
+::Note: You have to replace .fclang with .bat
+</code></pre>
+<p>Then, compile the module file first, then compile the main file at the end.</p>
+<h5 id="example">Example</h5>
+<p>Create a file called "module.fclang" with:</p>
+<pre><code>Cancer[fnc]
+Swear[fnc] World
+</code></pre>
+<p>Create a file called "program.fclang" with:</p>
+<pre><code>Swear[fnc] Hello
+InsertShits[fnc] module.bat
+</code></pre>
+<p>In the command window, type:</p>
+<pre><code>freakc module --compile
+freakc program
+</code></pre>
+<p>It will prints out:</p>
+<pre><code>Hello
+World
+</code></pre>
+<p>If you are a C++ dev, this would be an equivalent to "#include".</p>
+<h5 id="better-way">Better way</h5>
+<p>If you don't want to merge all the codes into one file (as FreakC uses a lot of labels), you can simply:</p>
+<pre><code>1. Create a module file with Cancer[fnc] on top of all the codes and add Die[fnc] /b in the bottom.
+2. Create a main file, but rather than using InsertShits[fnc], you can use normal GrabFnc[fnc] to access a file as a procedure.
+3. Compile the module file first, then compile and run the main file.
+</code></pre>
+<p>A demo can be found here.</p>
+<ul>
+<li>Find strings in a file</li>
+</ul>
+<p>FindShits[fnc]:</p>
+<pre><code>FindShits[fnc] [/V] [/C] [/N] [/I] [/OFF[LINE]] &quot;string&quot; [[drive:][path]filename[ ...]]
+</code></pre>
+<pre><code>/V Displays all lines NOT containing the specified string.
+/C Displays only the count of lines containing the string.
+/N Displays line numbers with the displayed lines.
+/I Ignores the case of characters when searching for the string.
+/OFF[LINE] Do not skip files with offline attribute set.
+&quot;string&quot; Specifies the text string to find.
+[drive:][path]filename Specifies a file or files to search.
+</code></pre>
+<pre><code>If a path is not specified, FIND searches the text typed at the prompt or piped from another command.
+If a path is not specified, FIND searches the text typed at the prompt or piped from another command.
+</code></pre>
+<p>FindTrash[fnc]:</p>
+<pre><code>FindTrash[fnc] [/B] [/E] [/L] [/R] [/S] [/I] [/X] [/V] [/N] [/M] [/O] [/P] [/F:file]
+[/C:string] [/G:file] [/D:dir list] [/A:color attributes] [/OFF[LINE]]
+strings [[drive:][path]filename[ ...]]
+</code></pre>
+<pre><code>/B Matches pattern if at the beginning of a line.
+/E Matches pattern if at the end of a line.
+/L Uses search strings literally.
+/R Uses search strings as regular expressions.
+/S Searches for matching files in the current directory and all subdirectories.
+/I Specifies that the search is not to be case-sensitive.
+/X Prints lines that match exactly.
+/V Prints only lines that do not contain a match.
+/N Prints the line number before each line that matches.
+/M Prints only the filename if a file contains a match.
+/O Prints character offset before each matching line.
+/P Skip files with non-printable characters.
+/OFF[LINE] Do not skip files with offline attribute set.
+/A:attr Specifies color attribute with two hex digits. See &quot;color /?&quot;
+/F:file Reads file list from the specified file(/ stands for console).
+/C:string Uses specified string as a literal search string.
+/G:file Gets search strings from the specified file(/ stands for console).
+/D:dir Search a semicolon delimited list of directories
+strings Text to be searched for.
+[drive:][path]filename Specifies a file or files to search.
+</code></pre>
+<pre><code>Use spaces to separate multiple search strings unless the argument is prefixed with /C.
+For example, 'FINDSTR &quot;hello there&quot; x.y' searches for &quot;hello&quot; or &quot;there&quot; in file x.y.
+'FINDSTR /C:&quot;hello there&quot; x.y' searches for &quot;hello there&quot; in file x.y.
+</code></pre>
+<pre><code>Regular expression quick reference:
+</code></pre>
+<p>. Wildcard: any character
+* Repeat: zero or more occurrences of previous character or class
+^ Line position: beginning of line
+$ Line position: end of line
+[class] Character class: any one character in set
+[^class] Inverse class: any one character not in set
+[x-y] Range: any characters within the specified range
+\x Escape: literal use of metacharacter x
+\&lt;xyz Word position: beginning of word
+xyz> Word position: end of word</p>
+<p>(Copied from the documentation of Batch)</p>
+<h3 id="other-useful-commands">Other useful commands</h3>
+<h4 id="exit-the-program">Exit the program</h4>
+<pre><code>Die[fnc]
+</code></pre>
+<h4 id="shutdown-system">Shutdown system</h4>
+<pre><code>ShutdownSystem[fnc]
+::Add /t time and /c &quot;comment&quot; to set the time to shutdown and leave a comment before shutdown
+</code></pre>
+<h4 id="restart-system">Restart system</h4>
+<pre><code>RestartSystem[fnc]
+::Add /t time and /c &quot;comment&quot; to set the time to shutdown and leave a comment before restart
+</code></pre>
+<h4 id="create-a-folder">Create a folder</h4>
+<pre><code>PukeDir[fnc] folder_name
+</code></pre>
+<h4 id="access-a-folder">Access a folder</h4>
+<pre><code>EatDir[fnc] folder_name
+</code></pre>
+<h4 id="access-a-drive">Access a drive</h4>
+<pre><code>EatDrive[fnc] drive_name
+</code></pre>
+<h4 id="read-a-file">Read a file</h4>
+<pre><code>StealDiary[fnc] file_name
+</code></pre>
+<h4 id="utilities">Utilities</h4>
+<h5 id="clear-the-screen">Clear the screen</h5>
+<pre><code>Forget[fnc]
+</code></pre>
+<h5 id="pause">Pause</h5>
+<pre><code>GotoToilet[fnc]
+</code></pre>
+<h5 id="delete-a-file">Delete a file</h5>
+<pre><code>Trash[fnc]
+</code></pre>
+<h5 id="delete-a-folder">Delete a folder</h5>
+<pre><code>TrashDir[fnc] folder_name
+</code></pre>
+<h5 id="check-if-a-number-is-odd-or-is-even">Check if a number is odd or is even</h5>
+<pre><code>OddOrEven[fnc] number
+</code></pre>
+<h5 id="change-color-a-pair-of-hex-code-is-a-color-code">Change color, a pair of hex code is a color code</h5>
+<pre><code>ChangeColor[fnc] hex_code
+</code></pre>
+<ul>
+<li>
+<p>0 = Black</p>
+</li>
+<li>
+<p>1 = Blue</p>
+</li>
+<li>
+<p>2 = Green</p>
+</li>
+<li>
+<p>3 = Aqua</p>
+</li>
+<li>
+<p>4 = Red</p>
+</li>
+<li>
+<p>5 = Purple</p>
+</li>
+<li>
+<p>6 = Yellow</p>
+</li>
+<li>
+<p>7 = White</p>
+</li>
+<li>
+<p>8 = Gray</p>
+</li>
+<li>
+<p>9 = Light Blue</p>
+</li>
+<li>
+<p>A = Light Green</p>
+</li>
+<li>
+<p>B = Light Aqua</p>
+</li>
+<li>
+<p>C = Light Red</p>
+</li>
+<li>
+<p>D = Light Purple</p>
+</li>
+<li>
+<p>E = Light Yellow</p>
+</li>
+</ul>
+<p>-F = Bright White</p>
+<h5 id="change-the-title-of-the-program">Change the title of the program</h5>
+<pre><code>ChangeName[fnc] title_name
+</code></pre>
+<h5 id="change-consoles-size">Change console's size</h5>
+<pre><code>ChangeSize[fnc] size_number
+ChangeSize[fnc] con cols=columns_or_width lines=lines_or_height
+</code></pre>
+<h5 id="rename-a-file">Rename a file</h5>
+<pre><code>RenameFile[fnc] file_name
+</code></pre>
+<h5 id="move-a-file-to-the-new-path">Move a file to the new path</h5>
+<pre><code>MoveFile[fnc] file_name new_path
+</code></pre>
+<h5 id="copy-a-file-to-the-new-path">Copy a file to the new path</h5>
+<pre><code>CopyFile[fnc] file_name new_path
+</code></pre>
+<h5 id="open-a-file-or-a-website-url-would-open-cmd-if-nothing-is-opened">Open a file or a website url (would open cmd if nothing is opened)</h5>
+<pre><code>PlayFile[fnc] file
+</code></pre>
+<h5 id="timeout-for-a-specific-time">Timeout for a specific time</h5>
+<pre><code>WaitForBus[fnc] time_as_second
+</code></pre>
+<h5 id="restart-the-program-or-loop-the-program-endlessly">Restart the program or loop the program endlessly</h5>
+<pre><code>Loop[fnc]
+</code></pre>
+<h5 id="shows-date">Shows date</h5>
+<pre><code>SeeDate[fnc]
+</code></pre>
+<h5 id="shows-time">Shows time</h5>
+<pre><code>SeeTime[fnc]
+</code></pre>
+<h5 id="shows-all-files-in-the-current-directory">Shows all files in the current directory</h5>
+<pre><code>MyMemory[fnc]
+</code></pre>
+<h5 id="show-command-prompt-content">Show command prompt content</h5>
+<pre><code>EnableCoolStuff[fnc]
+</code></pre>
+<p>This would be useful for debugging.This would be useful for debugging.</p>
+<h5 id="hide-command-prompt-content">Hide command prompt content</h5>
+<pre><code>DisableCoolStuff[fnc]
+</code></pre>
+<blockquote>
+<p>Note: All the command prompt content is hiden by defaultNote: All the command prompt content is hiden by default</p>
+</blockquote>
+<h5 id="prompt-for-date-to-change-date">Prompt for date to change date</h5>
+<pre><code>BuyCalender[fnc]
+</code></pre>
+<blockquote>
+<p>Note: Administrator is required to run the commandNote: Administrator is required to run the command</p>
+</blockquote>
+<h5 id="prompt-for-time-to-change-time">Prompt for time to change time</h5>
+<pre><code>BuyClock[fnc]
+</code></pre>
+<h5 id="open-powershell">Open powershell</h5>
+<pre><code>DumbCousin[fnc]
+</code></pre>
+<p>Note: Administrator is required to run the commandNote: Administrator is required to run the command</p>
+<h5 id="disable-prebuilt-variables">Disable prebuilt variables</h5>
+<p>You can disable numpoop, numpiss, numpuke,... by putting this block of code on top of your program:</p>
+<pre><code>Cancer[fnc]
+EnableCoolStuff[fnc]
+</code></pre>
+<h5 id="meme-and-j4f-commands">Meme and J4F commands</h5>
+<h5 id="patrick-functions">Patrick functions</h5>
+<p>You can prints out a quote of patrick from the huge collection of... 3 quotes that FreakC comes with :))</p>
+<pre><code>::Is mayonnaise an instrument?
+Patrick[meme] 1
+::Roses are blue, violets are red, I have to go to the bathroom.
+Patrick[meme] 2
+::I can't see my forehead.
+Patrick[meme] 3
+::The inner machinations of my mind are an enigma.
+Patrick[meme] 4
+::Once upon a time there was an ugly barnacle. He was so ugly that everyone died. The end!
+Patrick[meme] 5
+::I wumbo, you wumbo, he she we wumbo.
+Patrick[meme] 6
+::Two words, SpongeBob. Na. Chos.
+Patrick[meme] 7
+</code></pre>
+<p>And yes, no more [fnc], there is [meme] now =D</p>
+<h5 id="dani-functions">Dani functions</h5>
+<p>You can prints out Dani's quotes :))</p>
+<pre><code>::Not as thicc as your mom.
+Dani[meme] mom
+::Prints &quot;Wow that was really cool.&quot; endlessly
+Dani[meme] cool
+::Freak you billy.
+Dani[meme] billy
+</code></pre>
+<h5 id="spongebob-functions">SpongeBob functions</h5>
+<p>You can also do SpongeBob stuffs</p>
+<pre><code>::echo Ravioli, ravioli, give me formuoli.
+SpongeBob[meme] 1
+</code></pre>
+<h5 id="rick-ashley-the-legend">Rick Ashley the legend</h5>
+<pre><code>:: Pops a window that rickrolls you :D
+SummonLegend[fnc]
+</code></pre>
+<h5 id="collections-of-stupid-quotes">Collections of stupid quotes</h5>
+<pre><code>::Prints out Hello, World
+HelloWorld[str]
+::Prints out Grab me a drink, mate
+GrabMeADrink[str]
+::Prints out I Love You
+ILoveYou[str]
+::Prints out Are ya winning son?
+AreYaWinningSon[str]
+::Prints out Hi mate
+HiM8[str]
+::Prints out Damn boi... Damn boi... Damn boi he thicc boia, that's a thicc ass boi.
+Thicc[meme]
+</code></pre>
+<p>And again, yes, there is also [str] just for varieties =D</p>
+<h5 id="prints-out-random-numbers-continously-like-in-the-matrixprints-out-random-numbers-continously-like-in-the-matrix">Prints out random numbers continously (like in the Matrix)Prints out random numbers continously (like in the Matrix)</h5>
+<pre><code>CoolHackerMan[fnc]
+</code></pre>
+<h5 id="java-and-json-supports">Java and JSON supports :)</h5>
+<p>Just for surprising elements, just try it on your own =D</p>
+<pre><code>Java[fnc]
+Java[str]
+Java[meme]
+Json[str]
+</code></pre>
+<h5 id="equivalent-with-batch">Equivalent with Batch</h5>
+<h5 id="swearfnc-echo">Swear[fnc] - echo</h5>
+<h5 id="swearlinefnc-echo">SwearLine[fnc] - echo.</h5>
+<h5 id="poopintfnc-set-a">PoopInt[fnc] - set /a</h5>
+<h5 id="poopstringfnc-set">PoopString[fnc] - set</h5>
+<h5 id="poopinputfnc-set-p">PoopInput[fnc] - set /p</h5>
+<h5 id="poopfncfnc-label">PoopFnc[fnc] - :label</h5>
+<h5 id="grabfncfnc-goto">GrabFnc[fnc] - goto</h5>
+<h5 id="shittyp-set">Shit[typ] - set</h5>
+<h5 id="puketyp-set-a">Puke[typ] - set /a</h5>
+<h5 id="cumtyp-label">Cum[typ] - :label</h5>
+<h5 id="pisstyp-set-p">Piss[typ] - set /p</h5>
+<h5 id="loopstuffsfnc-for-l">LoopStuffs[fnc] - for /l</h5>
+<h5 id="scanorgansfnc-for-r">ScanOrgans[fnc] - for /r</h5>
+<h5 id="scanlettersfnc-for-f">ScanLetters[fnc] - for /f</h5>
+<h5 id="scandiariesfnc-for">ScanDiaries[fnc] - for</h5>
+<h5 id="scandirfnc-for-d">ScanDir[fnc] - for /d</h5>
+<h5 id="doiffnc-if">DoIf[fnc] - if</h5>
+<h5 id="doifexistfnc-if-exist">DoIfExist[fnc] - if exist</h5>
+<h5 id="doifdefinedfnc-if-defined">DoIfDefined[fnc] - if defined</h5>
+<h5 id="doiffalsefnc-if-not">DoIfFalse[fnc] - if not</h5>
+<h5 id="doifnotexistfnc-if-not-exist">DoIfNotExist[fnc] - if not exist</h5>
+<h5 id="doifnotdefinedfnc-if-not-defined">DoIfNotDefined[fnc] - if not defined</h5>
+<h5 id="doiftapfnc-if-errorlevel">DoIfTap[fnc] - if errorlevel</h5>
+<h5 id="doifnottapfnc-if-not-errorlevel">DoIfNotTap[fnc] - if not errorlevel</h5>
+<h5 id="tapsomeshtfnc-choice-c-n">TapSomeSht[fnc] - choice /c: /n</h5>
+<h5 id="ornotfnc-else">OrNot[fnc] - else</h5>
+<h5 id="gototoiletfnc-pause">GotoToilet[fnc] - pause</h5>
+<h5 id="diefnc-exit">Die[fnc] - exit</h5>
+<h5 id="shutdownsystemfnc-shutdown-s">ShutdownSystem[fnc] - shutdown -s</h5>
+<h5 id="restartsystemfnc-shutdown-r">RestartSystem[fnc] - shutdown -r</h5>
+<h5 id="pukedirfnc-md">PukeDir[fnc] - md</h5>
+<h5 id="eatdirfnc">EatDir[fnc]</h5>
+<h5 id="eatdrivefnc-drive">EatDrive[fnc] - drive:</h5>
+<h5 id="stealdiaryfnc-type">StealDiary[fnc] - type</h5>
+<h5 id="grabfncfnc-call">GrabFnc[fnc] - call</h5>
+<h6 id="forgetfnc-cls">Forget[fnc] - cls</h6>
+<h5 id="trashfnc-del">Trash[fnc] - del</h5>
+<h5 id="trashdirfnc-rmdir">TrashDir[fnc] - rmdir</h5>
+<h5 id="changecolorfnc-color">ChangeColor[fnc] - color</h5>
+<h5 id="changenamefnc-title">ChangeName[fnc] - title</h5>
+<h5 id="changesizefnc-mode">ChangeSize[fnc] - mode</h5>
+<h5 id="renamefilefnc-ren">RenameFile[fnc] - ren</h5>
+<h5 id="movefilefnc-move">MoveFile[fnc] - move</h5>
+<h5 id="copyfilefnc-copy">CopyFile[fnc] - copy</h5>
+<h5 id="playfilefnc-start">PlayFile[fnc] - start</h5>
+<h5 id="waitforbusfnc-timeout">WaitForBus[fnc] - timeout</h5>
+<h5 id="seedatefnc-date-t">SeeDate[fnc] - date /t</h5>
+<h5 id="seetimefnc-time-t">SeeTime[fnc] - time /t</h5>
+<h5 id="mymemoryfnc-dir">MyMemory[fnc] - dir</h5>
+<h5 id="enablecoolstufffnc-echo-off">EnableCoolStuff[fnc] - @echo off</h5>
+<h5 id="disablecoolstufffnc-echo-on">DisableCoolStuff[fnc] - @echo on</h5>
+<h5 id="buycalenderfnc-date">BuyCalender[fnc] - date</h5>
+<h5 id="buyclockfnc-time">BuyClock[fnc] - time</h5>
+<h5 id="openhousefnc-setlocal">OpenHouse[fnc] - setlocal</h5>
+<h5 id="closehousefnc-endlocal">CloseHouse[fnc] - endlocal</h5>
+<h5 id="findtrashfnc-findstr">FindTrash[fnc] - findstr</h5>
+<h5 id="findshitsfnc-find">FindShits[fnc] - find</h5>
+<h1 id="notesnotes">NotesNotes</h1>
+<p>Please do not put these commands in the same line as the others:Please do not put these commands in the same line as the others:</p>
+<h5 id="tapsomeshtfnc">TapSomeSht[fnc]</h5>
+<h5 id="trymebtchfnc">TryMeBtch[fnc]</h5>
+<h5 id="eatdrivefnc">EatDrive[fnc]</h5>
+<h5 id="oddorevenfnc">OddOrEven[fnc]</h5>
+<p>For example, this would cause error:</p>
+<pre><code>DoIf[fnc] %b% == %c% OddOrEven[fnc] 1
+</code></pre>
+<p>You should have it like this:</p>
+<pre><code>DoIf[fnc] %b% == %c% (
+OddOrEven[fnc] 1
+)
+</code></pre>
+<p>But with normal commands like Swear[fnc], you can use it however you want.</p>
+<p>Also, FreakC is case-sensitive, so you need to be strict with your code.Also, FreakC is case-sensitive, so you need to be strict with your code.</p>
+<p>Most of the commands are just modified Batch commands, so you can actually apply Batch logic in it.Most of the commands are just modified Batch commands, so you can actually apply Batch logic in it.</p>
+<h3 id="license">License</h3>
+<p>MIT License</p>
+<p>Copyright (c) 2020 Nguyen Phu Minh</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and
+to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2021-04-19 12:27:37.789844+00:00
+-->
